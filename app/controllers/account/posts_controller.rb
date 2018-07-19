@@ -6,7 +6,7 @@ def index
 end
 
 def edit
-  @posts = current_user.posts.find(params[:id])
+  @posts = Post.find(params[:id])
 end
 
 def update
