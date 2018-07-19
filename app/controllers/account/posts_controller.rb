@@ -7,12 +7,10 @@ end
 
 def edit
   @posts = Post.find(params[:id])
-  @group = @posts.group
 end
 
 def update
   @posts = Post.find(params[:id])
-
   if @posts.update(posts_params)
    redirect_to account_posts_path, notice: "Update Success"
  else
